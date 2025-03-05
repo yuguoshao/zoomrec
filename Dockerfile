@@ -82,7 +82,12 @@ RUN apt-get install --no-install-recommends -y \
         libxslt1.1 \
         libsqlite3-0 \
         libxcb-keysyms1 \
-        libxcb-xtest0 
+        libxcb-xtest0 \
+        libgbm1 \
+        desktop-file-utils \
+        libxcb-cursor0 \
+        libxcb-icccm4 \
+        libatomic1
 # Install Zoom
 RUN wget -q -O zoom_amd64.deb https://cdn.zoom.us/prod/6.3.11.7212/zoom_amd64.deb && \
     #dpkg -i zoom_amd64.deb && \
