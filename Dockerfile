@@ -61,9 +61,10 @@ RUN apt-get update && \
         at-spi2-core \
         xauth \
         x11-xserver-utils \
-        libxkbcommon-x11-0 && \
+        libxkbcommon-x11-0 
+        
 # Install Zoom dependencies
-    apt-get install --no-install-recommends -y \
+RUN apt-get install --no-install-recommends -y \
         libxcb-xinerama0 \
         libglib2.0-0 \
         libxcb-shape0 \
