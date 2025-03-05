@@ -31,6 +31,7 @@ RUN apt-get update && \
         openssl \
         wget \
         locales \
+        gnome-screenshot \
         bzip2 \
         tzdata && \
 # Generate locales for en_US.UTF-8
