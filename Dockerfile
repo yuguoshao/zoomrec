@@ -85,7 +85,8 @@ RUN apt-get install --no-install-recommends -y \
         libxcb-xtest0 
 # Install Zoom
 RUN wget -q -O zoom_amd64.deb https://cdn.zoom.us/prod/6.3.11.7212/zoom_amd64.deb && \
-    dpkg -i zoom_amd64.deb && \
+    #dpkg -i zoom_amd64.deb && \
+    dpkg -i zoom_amd64.deb || (cat /var/log/dpkg.log && exit 1) && \
     apt-get -f install -y && \
     rm -rf zoom_amd64.deb 
 # Install FFmpeg
